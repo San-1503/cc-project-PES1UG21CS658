@@ -5,18 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 // sh 'copy.bat'
-                sh 'docker build -t uc1 ./uc1'
-                sh 'docker tag uc1 asbark/uc1:latest'
-                sh 'docker push asbark/uc1:latest'
-                sh 'docker build -t uc2 ./uc2'
-                sh 'docker tag uc2 asbark/uc2:latest'
-                sh 'docker push asbark/uc2:latest'
-                sh 'docker build -t uc3 ./uc3'
-                sh 'docker tag uc3 asbark/uc3:latest'
-                sh 'docker push asbark/uc3:latest'
-                sh 'docker build -t frontend ./frontend'
-                sh 'docker tag frontend asbark/frontend:latest'
-                sh 'docker push asbark/frontend:latest'
+                sh 'docker build -t syedasaniya153/uc1:latest ./uc1'
+                sh 'docker push syedasaniya153/uc1:latest'
+                sh 'docker build -t syedasaniya153/uc2:latest ./uc2'
+                sh 'docker push syedasaniya153/uc2:latest'
+                sh 'docker build -t syedasaniya153/uc3:latest ./uc3'
+                sh 'docker push syedasaniya153/uc3:latest'
+                sh 'docker build -t syedasaniya153/frontend:latest ./frontend'
+                sh 'docker push syedasaniya153/frontend:latest'
             }
         }
         
